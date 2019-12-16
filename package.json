@@ -1,0 +1,20 @@
+{
+  "name": "cprinter",
+  "version": "0.1.0",
+  "description": "The localhost printer",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "club",
+    "programacion",
+    "printer",
+    "localhost"
+  ],
+  "author": "Disble",
+  "license": "MIT",
+  "dependencies": {
+    "pdf-to-printer": "^1.1.1"
+  }
+}
