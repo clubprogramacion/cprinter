@@ -1,0 +1,32 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.cp-upload-container {
+    width: 400px;
+    height: 300px;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 -2px 0 hsla(0, 0%, 100%, .15),
+    inset 0 2px 2px hsla(0, 0%, 0%, .1);
+}
+
+.cp-icon-upload {
+    font-size: 56px;
+}
+
+.flex {
+	display: flex;
+}
+
+.flex-x-center {
+	justify-content: center;
+}
+
+.flex-y-center {
+	align-items: center;
+}
+
+.bold {
+    font-weight: bold;
+}
