@@ -1,33 +1,49 @@
-# https://git-scm.com/docs/gitignore
-# https://help.github.com/articles/ignoring-files
-# Example .gitignore files: https://github.com/github/gitignore
-/data/
-/ignore/
-/dist/
-/.vs/
+# See http://help.github.com/ignore-files/ for more about ignoring files.
 
-*~
-*.sw[mnpcod]
-*.log
-*.tmp
-*.tmp.*
-log.txt
-*.sublime-project
+# others
+/ignore
+*.pdf
+/docs_to_print
+
+#compodoc
+/documentation
+
+# compiled output
+/dist
+/tmp
+/out-tsc
+
+# dependencies
+/node_modules
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
 *.sublime-workspace
-.vscode/
-npm-debug.log*
 
-.idea/
-.sourcemaps/
-.sass-cache/
-.tmp/
-.versions/
-coverage/
-node_modules/
-tmp/
-temp/
-$RECYCLE.BIN/
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
 
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+/ignore
+.env
+
+# System Files
 .DS_Store
 Thumbs.db
-UserInterfaceState.xcuserstate
