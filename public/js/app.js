@@ -88,6 +88,10 @@ async function uploadFile(file) {
             wazedevtoastr["success"](file.name, "Imprimiendo...", {
                 "positionClass": "toast-bottom-right",
             });
+        } else {
+            wazedevtoastr["error"](res.statusText, "Error:", {
+                "positionClass": "toast-bottom-right",
+            });
         }
     } catch (error) {
         /* Error. Inform the user */
