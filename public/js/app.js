@@ -15,7 +15,10 @@ function initializeProgress(numfiles) {
     filesDone = 0;
     filesToDo = numfiles;
 }
-
+/**
+ * Carga el porcentaje de la barra de carga, en relación 
+ * a número de archivos subidos.
+ */
 function progressDone() {
     progressBar.style.width = `${filesDone / filesToDo * 100}%`;
     filesDone++;
@@ -116,7 +119,6 @@ async function uploadFile(file) {
 });
 // evento drop para subir archivos
 dropArea.addEventListener('drop', handleDrop, false);
-
 // click-drop para smartphones, también se puede hacer con touchstart, pero da una advertencia y toca hacer tap dos veces
 dropArea.addEventListener('click', e => {
     alterUpload.click();
