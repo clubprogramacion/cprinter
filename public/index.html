@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <!--Import materialize.css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="css/toastr.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -19,24 +20,40 @@
         <h1 class="center grey-text text-darken-4">CPrinter</h1>
         <div class="row">
             <div class="col s12 flex flex-x-center">
-                <div class="cp-upload-container blue-grey lighten-5 flex flex-x-center flex-y-center">
-                    <div class="row">
-                        <div class="col s12 center">
-                            <i class="material-icons blue-grey-text darken-4-text cp-icon-upload ">cloud_upload</i>
+                <div id="drop-area" class="cp-upload-container blue-grey lighten-5 flex flex-x-center flex-y-center">
+                    <form action="/print" method="post">
+                        <div class="row">
+                            <div class="col s12 center">
+                                <i class="material-icons blue-grey-text darken-4-text cp-icon-upload ">cloud_upload</i>
+                            </div>
+                            <div class="col s12">
+                                <p class="blue-grey-text darken-4-text bold center-align">Arrastre y suelte aquí o
+                                    haga
+                                    <span class="blue-text bold pointer">clic</span>
+                                    <!-- <label class="cp-upload-alter-label blue-text" for="alterUpload">clic</label> -->
+                                    para subir un archivo
+                                </p>
+                            </div>
+                            <input type="file" id="alterUpload" class="cp-upload-alter-input" multiple
+                                accept="application/pdf,application/vnd.ms-excel" onchange="handleFiles(this.files)" />
                         </div>
-                        <div class="col s12">
-                            <p class="blue-grey-text darken-4-text bold center-align">Arrastre y suelte aquí o
-                                haga
-                                <a href="#!">clic</a>
-                                para subir un archivo</p>
-                        </div>
-                    </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col s12 flex flex flex-x-center">
+                <div class="progress cp-progress-bar no-margin">
+                    <div class="determinate" id="progress-bar" style="width: 0"></div>
                 </div>
             </div>
         </div>
     </div>
     <!--JavaScript at end of body for optimized loading-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <!-- Esta es una versión modificada del original por temas de compatibilidad con materializecss -->
+    <!-- https://github.com/WazeDev/toastr -->
+    <script src="js/toastr.js"></script>
+    <script src="js/app.js"></script>
 </body>
 
 </html>

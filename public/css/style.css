@@ -11,8 +11,27 @@ body {
     inset 0 2px 2px hsla(0, 0%, 0%, .1);
 }
 
+.cp-upload-container.highlight {
+    background-color: #b3e5fc !important;
+}
+
+.cp-progress-bar {
+    /* width: 390px; */
+    max-width: 390px;
+}
+
 .cp-icon-upload {
     font-size: 56px;
+}
+
+.cp-upload-alter-input {
+    width: 0;
+    height: 0;
+}
+
+.cp-upload-alter-label {
+    cursor: pointer;
+    font-size: 15.5px;
 }
 
 .flex {
@@ -29,4 +48,12 @@ body {
 
 .bold {
     font-weight: bold;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.pointer {
+    cursor: pointer;
 }

@@ -4,7 +4,7 @@
   "description": "The localhost printer",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "npx nodemon ."
   },
   "keywords": [
     "club",
