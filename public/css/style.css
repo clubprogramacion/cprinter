@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../font/OpenSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 :root {
     --app-violet: #5f2180;
     --app-blue: #321f6f;
