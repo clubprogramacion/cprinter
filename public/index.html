@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -32,9 +32,14 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
-    <div class="container">
-        <h1 class="center grey-text text-darken-4">CPrinter</h1>
+<body class="vh-100 flex flex-y-center">
+    <div class="container cp-container">
+        <!-- <h1 class="center grey-text text-darken-4">CPrinter</h1> -->
+        <div class="row mt-20">
+            <div class="col s12 flex flex-x-center">
+                <img src="images/logo-preferente.svg" alt="Logo" width="250">
+            </div>
+        </div>
         <div class="row">
             <div class="col s12 flex flex-x-center">
                 <div id="drop-area" class="cp-upload-container blue-grey lighten-5 flex flex-x-center flex-y-center">
@@ -46,9 +51,9 @@
                             <div class="col s12">
                                 <p class="blue-grey-text darken-4-text bold center-align">Arrastre y suelte aquí o
                                     haga
-                                    <span class="blue-text bold pointer">clic</span>
+                                    <span class="cp-link bold pointer">clic</span>
                                     <!-- <label class="cp-upload-alter-label blue-text" for="alterUpload">clic</label> -->
-                                    para subir un archivo
+                                    para imprimir un archivo
                                 </p>
                             </div>
                             <input type="file" id="alterUpload" class="cp-upload-alter-input" multiple

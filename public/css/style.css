@@ -1,9 +1,15 @@
 :root {
     --app-violet: #5f2180;
+    --app-blue: #321f6f;
 }
 
 body {
     font-family: 'Open Sans', sans-serif;
+}
+
+.cp-container {
+    position: relative;
+    top: -64px;
 }
 
 .cp-upload-container {
@@ -38,6 +44,10 @@ body {
     font-size: 15.5px;
 }
 
+.cp-link {
+    color: var(--app-blue);
+}
+
 .flex {
 	display: flex;
 }
@@ -54,10 +64,19 @@ body {
     font-weight: bold;
 }
 
+.mt-20 {
+    margin-top: 20px;
+}
+
 .no-margin {
     margin: 0;
 }
 
 .pointer {
     cursor: pointer;
+}
+
+.vh-100 {
+    height: 100vh;
+    /* height: 100%; */
 }
