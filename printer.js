@@ -5,9 +5,12 @@ async function cprint(documentToPrint) {
         let resp = await printer.print(documentToPrint);
         console.log(resp);
     } catch (error) {
-        console.error(error);
+        console.error('Error',error);
     }
 }
 
-let documentToPrint = 'cpriner.pdf';
-cprint(documentToPrint);
+// let documentToPrint = 'cpriner.pdf';
+// cprint(documentToPrint);
+module.exports = {
+    "cprint": cprint
+}
