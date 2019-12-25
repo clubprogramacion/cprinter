@@ -3,9 +3,10 @@ const printer = require('pdf-to-printer');
 async function cprint(documentToPrint) {
     try {
         let resp = await printer.print(documentToPrint);
-        console.log(resp);
+        return true;
     } catch (error) {
         console.error('Error',error);
+        return error;
     }
 }
 

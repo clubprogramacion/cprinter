@@ -4,6 +4,7 @@ const morgan = require('morgan');
 const fileUpload = require('express-fileupload');
 const app = express();
 const printer = require('./printer');
+const fs = require('fs');
 
 // settings
 app.set('appName', 'cprinter');
@@ -26,14 +27,25 @@ app.post('/print', (req, res) => {
         return res.status(400).send('No files were uploaded.');
     let file_printer = req.files.file;
     let path = `./docs_to_print/${file_printer.name}`;
-    file_printer.mv(path,err => {
+    // File Save
+    file_printer.mv(path, err => {
         if (err) {
-            console.log('Error',err);  
-            return res.status(500).send({ message: err });  
-        }    
+            console.log('Error', err);
+            return res.status(500).send({ message: err });
+        }
     })
-    printer.cprint(path);
-    return res.status(200).send({ message: 'File upload' });
+    // File printer
+    if (printer.cprint(path) == true) {
+        // File delete
+        fs.unlink(path, (err) => {
+            if (err) {
+                return res.status(400).send('No files delete.');
+            }
+        })
+    } else {
+        return res.status(400).send('No files printer.');
+    }
+    return res.status(200).send({ message: 'File Printer' });
 });
 
 app.use(express.static('public')); // como no encuentra la ruta / retorna el index.html
