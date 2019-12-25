@@ -1,3 +1,7 @@
+:root {
+    --app-violet: #5f2180;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
 }
