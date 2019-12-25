@@ -25,7 +25,15 @@ app.post('/print', (req, res) => {
     if (!req.files)
         return res.status(400).send('No files were uploaded.');
     let file_printer = req.files.file;
-    printer.cprint(file_printer.name);
+    let path = `./docs_to_print/${file_printer.name}`;
+    file_printer.mv(path,err => {
+        if (err) {
+            console.log('Error',err);  
+            return res.status(500).send({ message: err });  
+        }    
+    })
+    printer.cprint(path);
+    return res.status(200).send({ message: 'File upload' });
 });
 
 app.use(express.static('public')); // como no encuentra la ruta / retorna el index.html
