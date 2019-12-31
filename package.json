@@ -15,6 +15,7 @@
   "author": "Disble",
   "license": "MIT",
   "dependencies": {
+    "chalk": "^3.0.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-fileupload": "^1.1.6",

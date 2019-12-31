@@ -1,17 +1,32 @@
 const printer = require('pdf-to-printer');
 
+/**
+ * Imprime un archivo en la impresora predeterminada.
+ * @param {string} documentToPrint Ubicación del archivo a imprimir
+ */
 async function cprint(documentToPrint) {
     try {
-        let resp = await printer.print(documentToPrint);
+        await printer.print(documentToPrint); // cuando todo va bien retorna nada
         return true;
     } catch (error) {
-        console.error('Error',error);
-        return error;
+        throw (error);
     }
 }
 
-// let documentToPrint = 'cpriner.pdf';
-// cprint(documentToPrint);
-module.exports = {
-    "cprint": cprint
+/**
+ * Valida que la extension sea entre las aceptadas.
+ * @param {string} ext Extension
+ */
+function validateExt(ext) {
+    switch (ext) {
+        case '.png':
+            return true;
+        case '.pdf':
+            return true;
+        default:
+            return false;
+    }
 }
+
+exports.cprint = cprint;
+exports.validateExt = validateExt;
