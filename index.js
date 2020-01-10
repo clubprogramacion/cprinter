@@ -58,6 +58,7 @@ app.post('/print', async (req, res) => {
         await cprint(dir); // imprime
         fs.unlinkSync(dir); // borra el archivo
     } catch (error) {
+        fs.unlinkSync(dir); // borra el archivo
         if (typeof error === 'string') {
             logRed(error);
             res.statusMessage = error;
