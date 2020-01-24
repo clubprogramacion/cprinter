@@ -18,8 +18,10 @@ async function cprint(documentToPrint) {
  * @param {string} ext Extension
  */
 function validateExt(ext) {
-    switch (ext) {
+    switch (ext.toLowerCase()) {
         case '.png':
+            return true;
+        case '.jpg':
             return true;
         case '.pdf':
             return true;
